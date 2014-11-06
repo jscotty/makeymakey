@@ -84,7 +84,7 @@ package game
 			
 			
 			
-			_obstacle = new Obstacle1(2000,30,2500,-210);
+			_obstacle = new Obstacle1(2000,30,2500,-200);
 			_obstacle.x = 520;
 			_obstacle.y = 450;
 			_obstacle.scaleX = 0.5;

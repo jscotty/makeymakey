@@ -47,6 +47,9 @@ package game.obstacle
 				min = 2;
 				main1.y -= min;
 				
+				main2.scaleY -= 0.01;
+				main2.y += 0.2;
+				
 				} else if (bool == false){
 					min = 2;
 					main1.y += min;
