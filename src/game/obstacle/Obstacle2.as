@@ -27,8 +27,8 @@ package game.obstacle
 			main1 = new BewareTwo1();
 			main1.x = 700;
 			main1.y = -90;
-			main1.scaleX = 0.2;
-			main1.scaleY = 0.3;
+			main1.scaleX = 0.25;
+			main1.scaleY = 0.45;
 			addChild(main1);
 			
 			addEventListener(Event.ENTER_FRAME, onCollision);
@@ -51,10 +51,10 @@ package game.obstacle
 				main1.y -= grafity;
 			}
 			
-			if (main.hitTestPoint(mainPoint.x + 140 ,mainPoint.y - 20,true)) {
+			if (main.hitTestPoint(mainPoint.x + 205 ,mainPoint.y - 20,true)) {
 				mainPoint.x = main1.x;
 				mainPoint.y = main1.y;
-				main1.x -=5;
+				main1.x -=10;
 			}
 			
 			
@@ -67,7 +67,7 @@ package game.obstacle
 			}
 			
 			 if (main1.hitTestObject(Game._player1) && main1.hitTestObject(Game._player2)) {
-				main1.x += 5;
+				main1.x += 10;
 			}
 		}
 		

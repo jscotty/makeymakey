@@ -13,6 +13,7 @@ package game.players
 		private var _player1Walk:Player1Walk;
 		private var _player1push:Player1Push;
 		private var _player1Balance:Player1Balance;
+		private var _player1Death:Player1Death;
 		
 		public function Player(s:Stage) 
 		{
@@ -35,6 +36,10 @@ package game.players
 			_player1Balance = new Player1Balance();
 			addChild(_player1Balance);
 			_player1Balance.visible = false;
+			
+			_player1Death = new Player1Death();
+			addChild(_player1Death);
+			_player1Death.visible = false;
 		}
 		
 		public function anim(animNr:Number) :void
@@ -45,6 +50,7 @@ package game.players
 				_player1Walk.visible = false;
 				_player1push.visible = false;
 				_player1Balance.visible = false;
+				_player1Death.visible = false;
 			}
 			else if (animNr == 1) {
 				_playerIdle.visible = false;
@@ -52,6 +58,7 @@ package game.players
 				_player1Walk.visible = false;
 				_player1push.visible = false;
 				_player1Balance.visible = false;
+				_player1Death.visible = false;
 			}
 			else if (animNr == 2) {
 				_playerIdle.visible = false;
@@ -59,6 +66,7 @@ package game.players
 				_player1Walk.visible = true;
 				_player1push.visible = false;
 				_player1Balance.visible = false;
+				_player1Death.visible = false;
 			}
 			else if (animNr == 3) {
 				_playerIdle.visible = false;
@@ -66,6 +74,7 @@ package game.players
 				_player1Walk.visible = false;
 				_player1push.visible = true;
 				_player1Balance.visible = false;
+				_player1Death.visible = false;
 			}
 			else if (animNr == 4) {
 				_playerIdle.visible = false;
@@ -73,6 +82,15 @@ package game.players
 				_player1Walk.visible = false;
 				_player1push.visible = false;
 				_player1Balance.visible = true;
+				_player1Death.visible = false;
+			}
+			else if (animNr == 5) {
+				_playerIdle.visible = false;
+				_player1Jump.visible = false;
+				_player1Walk.visible = false;
+				_player1push.visible = false;
+				_player1Balance.visible = false;
+				_player1Death.visible = true;
 			}
 		}
 		
